@@ -1,12 +1,15 @@
-Dataset used:
-
 Fake News Detection Dataset
 
 Source:
 https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
 
-Files:
+Files Required:
 - Fake.csv
 - True.csv
 
-Download the dataset and place the files locally before running the notebook.
+Download the dataset from Kaggle and place the files locally before running the notebook.
+
+Dataset Statistics:
+- Total Articles: 44,898
+- Fake News Articles: 23,481
+- True News Articles: 21,417
