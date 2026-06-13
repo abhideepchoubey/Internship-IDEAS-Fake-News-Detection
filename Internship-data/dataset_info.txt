@@ -1,0 +1,12 @@
+Dataset used:
+
+Fake News Detection Dataset
+
+Source:
+https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
+
+Files:
+- Fake.csv
+- True.csv
+
+Download the dataset and place the files locally before running the notebook.
