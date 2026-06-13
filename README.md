@@ -267,21 +267,24 @@ Add the generated image below:
 ## Repository Structure
 
 ```text
-Internship-IDEAS-Fake-News-Detection/
+Internship-IDEAS-TIH-project/
 │
 ├── .gitignore
+├── .python-version
 ├── README.md
 ├── requirements.txt
-├── .python-version
 │
 ├── internship-data/
 │   └── dataset_info.txt
 │
-├── 04-Fake_News_Detection_and_Evaluation_with_Confusion_Matrix_Summer_2026.ipynb
+├── outputs/
+│   ├── classification_report.txt
+│   └── confusion_matrix.png
 │
-├── classification_report.txt
-├── confusion_matrix.png
-└── fake_news_sample.png
+├── images/
+│   └── workflow.png
+│
+└── 04-Fake_News_Detection_and_Evaluation_with_Confusion_Matrix_Summer_2026.ipynb
 ```
 
 ---
