@@ -8,8 +8,9 @@ Summer Internship 2026 project notebook for fake news classification using Machi
 
 * `04-Fake_News_Detection_and_Evaluation_with_Confusion_Matrix_Summer_2026.ipynb` : Main project notebook.
 * `internship-data/dataset_info.txt` : Dataset information and download instructions.
-* `classification_report.txt` : Logistic Regression classification report.
-* `confusion_matrix.png` : Confusion Matrix visualization.
+* `outputs/classification_report.txt` : Logistic Regression classification report.
+* `outputs/confusion_matrix.png` : Confusion Matrix visualization.
+* `images/workflow.png` : Workflow diagram of the complete machine learning pipeline.
 * `requirements.txt` : Python package requirements.
 
 The dataset files (`Fake.csv` and `True.csv`) are not committed because they are large.
@@ -81,45 +82,20 @@ https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
 
 ---
 
-## Covered Tasks
+## Installation
 
-### Data Preparation
+Clone the repository:
 
-* Load Fake.csv and True.csv datasets.
-* Create target labels.
-* Merge datasets.
-* Shuffle records.
-* Remove unnecessary columns.
-* Prepare clean text data.
+```bash
+git clone https://github.com/<your-username>/Internship-IDEAS-TIH-project.git
+cd Internship-IDEAS-TIH-project
+```
 
-### Text Preprocessing
+Install dependencies:
 
-* Convert text to lowercase.
-* Remove URLs.
-* Remove special characters.
-* Remove extra spaces.
-
-### Feature Engineering
-
-* Convert text into numerical vectors using TF-IDF Vectorization.
-
-### Model Training
-
-* Logistic Regression
-* Decision Tree Classifier
-
-### Model Evaluation
-
-* Accuracy Score
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-
-### Hyperparameter Optimization
-
-* GridSearchCV
-* Parameter tuning for Logistic Regression
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
@@ -167,6 +143,49 @@ Open:
 
 ---
 
+## Covered Tasks
+
+### Data Preparation
+
+* Load Fake.csv and True.csv datasets.
+* Create target labels.
+* Merge datasets.
+* Shuffle records.
+* Remove unnecessary columns.
+* Prepare clean text data.
+
+### Text Preprocessing
+
+* Convert text to lowercase.
+* Remove URLs.
+* Remove special characters.
+* Remove extra spaces.
+
+### Feature Engineering
+
+* Convert text into numerical vectors using TF-IDF Vectorization.
+
+### Model Training
+
+* Logistic Regression
+* Decision Tree Classifier
+
+### Hyperparameter Optimization
+
+* GridSearchCV
+* Parameter tuning for Logistic Regression
+
+### Model Evaluation
+
+* Accuracy Score
+* Precision
+* Recall
+* F1 Score
+* Classification Report
+* Confusion Matrix
+
+---
+
 ## Technologies Used
 
 * Python
@@ -197,6 +216,12 @@ Open:
 
 ---
 
+## Workflow Diagram
+
+![Workflow](images/workflow.png)
+
+---
+
 ## Key Outputs
 
 ### Dataset Split
@@ -211,7 +236,7 @@ Open:
 
 ### Logistic Regression Results
 
-#### Classification Report
+#### Classification Report Summary
 
 | Class         | Precision | Recall | F1-Score |
 | ------------- | --------- | ------ | -------- |
@@ -242,15 +267,85 @@ Best Parameters Found:
 
 ---
 
-## Confusion Matrix
+## Model Performance
 
-Add the generated image below:
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Logistic Regression | 99.0%    |
+| Decision Tree       | 99.64%   |
 
-```markdown
-![Confusion Matrix](confusion_matrix.png)
+---
+
+## Logistic Regression Classification Report
+
+```text
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99      5349
+           1       0.99      0.99      0.99      5876
+
+    accuracy                           0.99     11225
+   macro avg       0.99      0.99      0.99     11225
+weighted avg       0.99      0.99      0.99     11225
 ```
 
 ---
+
+## Confusion Matrix
+
+![Confusion Matrix](outputs/confusion_matrix.png)
+
+---
+
+## Workflow Diagram
+
+The following workflow illustrates the complete fake news detection pipeline implemented in this project.
+
+![Workflow](images/workflow.png)
+
+### Workflow Steps
+
+1. **Dataset Loading**
+   - Load `Fake.csv` and `True.csv`.
+   - Assign labels to each dataset.
+
+2. **Data Preparation**
+   - Merge datasets.
+   - Shuffle records.
+   - Remove unnecessary columns.
+
+3. **Text Preprocessing**
+   - Convert text to lowercase.
+   - Remove URLs.
+   - Remove special characters.
+   - Remove extra whitespace.
+
+4. **Feature Engineering**
+   - Transform text into numerical vectors using TF-IDF Vectorization.
+
+5. **Train-Test Split**
+   - Split data into training and testing sets (75%-25%).
+
+6. **Model Training**
+   - Logistic Regression.
+   - Decision Tree Classifier.
+
+7. **Hyperparameter Tuning**
+   - GridSearchCV for Logistic Regression optimization.
+
+8. **Model Evaluation**
+   - Accuracy Score.
+   - Precision.
+   - Recall.
+   - F1 Score.
+   - Classification Report.
+   - Confusion Matrix.
+
+9. **Results Analysis**
+   - Compare model performance.
+   - Identify best-performing model.
+
+
 
 ## Expected Outputs
 
@@ -281,17 +376,27 @@ Internship-IDEAS-TIH-project/
 │   ├── classification_report.txt
 │   └── confusion_matrix.png
 │
-├── images/
-│   └── workflow.png
+├── workflow.png
 │
 └── 04-Fake_News_Detection_and_Evaluation_with_Confusion_Matrix_Summer_2026.ipynb
 ```
 
 ---
 
+## Future Improvements
+
+* Random Forest Classifier
+* XGBoost
+* LSTM-based Fake News Detection
+* BERT-based News Classification
+* Real-Time Fake News Detection API
+* Web-Based User Interface
+
+---
+
 ## Author
 
-**Abhideep**
+**Abhideep Choubey**
 
 IIEST Shibpur
 
@@ -301,6 +406,3 @@ IDEAS – Institute of Data Engineering, Analytics and Science Foundation
 
 ---
 
-## License
-
-This project is intended for educational and internship demonstration purposes.
