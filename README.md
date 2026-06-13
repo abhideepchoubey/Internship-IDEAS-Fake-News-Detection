@@ -218,9 +218,52 @@ Open:
 
 ## Workflow Diagram
 
-![Workflow](images/workflow.png)
+The following workflow illustrates the complete fake news detection pipeline implemented in this project.
 
----
+![Workflow](workflow.png)
+
+### Workflow Steps
+
+1. **Dataset Loading**
+   - Load `Fake.csv` and `True.csv`.
+   - Assign labels to each dataset.
+
+2. **Data Preparation**
+   - Merge datasets.
+   - Shuffle records.
+   - Remove unnecessary columns.
+
+3. **Text Preprocessing**
+   - Convert text to lowercase.
+   - Remove URLs.
+   - Remove special characters.
+   - Remove extra whitespace.
+
+4. **Feature Engineering**
+   - Transform text into numerical vectors using TF-IDF Vectorization.
+
+5. **Train-Test Split**
+   - Split data into training and testing sets (75%-25%).
+
+6. **Model Training**
+   - Logistic Regression.
+   - Decision Tree Classifier.
+
+7. **Hyperparameter Tuning**
+   - GridSearchCV for Logistic Regression optimization.
+
+8. **Model Evaluation**
+   - Accuracy Score.
+   - Precision.
+   - Recall.
+   - F1 Score.
+   - Classification Report.
+   - Confusion Matrix.
+
+9. **Results Analysis**
+   - Compare model performance.
+   - Identify best-performing model.
+
 
 ## Key Outputs
 
@@ -296,55 +339,6 @@ weighted avg       0.99      0.99      0.99     11225
 ![Confusion Matrix](outputs/confusion_matrix.png)
 
 ---
-
-## Workflow Diagram
-
-The following workflow illustrates the complete fake news detection pipeline implemented in this project.
-
-![Workflow](images/workflow.png)
-
-### Workflow Steps
-
-1. **Dataset Loading**
-   - Load `Fake.csv` and `True.csv`.
-   - Assign labels to each dataset.
-
-2. **Data Preparation**
-   - Merge datasets.
-   - Shuffle records.
-   - Remove unnecessary columns.
-
-3. **Text Preprocessing**
-   - Convert text to lowercase.
-   - Remove URLs.
-   - Remove special characters.
-   - Remove extra whitespace.
-
-4. **Feature Engineering**
-   - Transform text into numerical vectors using TF-IDF Vectorization.
-
-5. **Train-Test Split**
-   - Split data into training and testing sets (75%-25%).
-
-6. **Model Training**
-   - Logistic Regression.
-   - Decision Tree Classifier.
-
-7. **Hyperparameter Tuning**
-   - GridSearchCV for Logistic Regression optimization.
-
-8. **Model Evaluation**
-   - Accuracy Score.
-   - Precision.
-   - Recall.
-   - F1 Score.
-   - Classification Report.
-   - Confusion Matrix.
-
-9. **Results Analysis**
-   - Compare model performance.
-   - Identify best-performing model.
-
 
 
 ## Expected Outputs
